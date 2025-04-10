@@ -1,0 +1,12 @@
+name: var
+on:
+  push:
+    branches:
+      - feature_branch1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: production
