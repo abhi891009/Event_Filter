@@ -1,1 +1,15 @@
+name: var
 
+on:
+  push:
+    branches:
+      - New_Feature_branch
+
+jobs:
+  linux-os:
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: example_step
+        run: echo "message= Hello I am abhi and doing context practice" >> $GITHUB_ENV
+      - run: echo "Message is" ${{ step.example_step.output.message }}
