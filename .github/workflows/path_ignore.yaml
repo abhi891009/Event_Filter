@@ -1,19 +1,14 @@
+
 name: CI
 
 on:
-  push:
-    branches:
-      - feature_branch1
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-
+  push:
+    tags-ignore:
+      - 'v*'
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
