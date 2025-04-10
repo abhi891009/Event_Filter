@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - feature_branch1
     paths-ignore:
       - 'docs/**'
       - 'README.md'
